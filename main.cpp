@@ -1,4 +1,4 @@
-#include<Windows.h>
+п»ї#include<Windows.h>
 #include<cstdio>
 #include"resource.h"
 
@@ -39,12 +39,12 @@ BOOL CALLBACK DlgProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 			if (i != CB_ERR) 
 			{
 				SendMessage(hCombo, CB_GETLBTEXT, i, (LPARAM)sz_buffer);
-				wsprintf(sz_message, "Вы выбрали элемент %i со значением \"%s", i+1, sz_buffer);
+				wsprintf(sz_message, "Р’С‹ РІС‹Р±СЂР°Р»Рё СЌР»РµРјРµРЅС‚ %i СЃРѕ Р·РЅР°С‡РµРЅРёРµРј \"%s", i+1, sz_buffer);
 				MessageBox(hwnd, sz_message, "Info", MB_OK | MB_ICONINFORMATION);
 			}
 			else 
 			{
-				MessageBox(hwnd, "Вы ничего не выбрали", "Info", MB_OK | MB_ICONINFORMATION);
+				MessageBox(hwnd, "Р’С‹ РЅРёС‡РµРіРѕ РЅРµ РІС‹Р±СЂР°Р»Рё", "Info", MB_OK | MB_ICONINFORMATION);
 			}
 		}
 		break;
